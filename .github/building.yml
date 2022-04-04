@@ -1,0 +1,44 @@
+name: rebuilding
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: formatter_lib
+        shell: bash
+        run: |
+          cd formatter_lib/
+          cmake -Bbuild
+          cd build
+          make
+          
+      - name: formatter_ex_lib
+        shell: bash
+        run: |
+          cd formatter_ex_lib/
+          cmake -Bbuild
+          cd build
+          make
+          
+      - name: hw_app
+        shell: bash
+        run: |
+          cd hello_world_application/
+          cmake -Bbuild
+          cd build
+          make
+          ./hw
+          
+      - name: solver_app
+        shell: bash
+        run: |
+          cd solver_application/
+          cmake -Bbuild
+          cd build
+          make
+          ./solver
