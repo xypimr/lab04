@@ -45,7 +45,7 @@ jobs:
           cmake -Bbuild
           cd build
           make
-          ./hw
+          ./example
           
       - name: solver_app
         shell: bash
@@ -54,4 +54,4 @@ jobs:
           cmake -Bbuild
           cd build
           make
-          ./solver
+          ./example
