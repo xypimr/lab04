@@ -25,7 +25,7 @@ jobs:
       - name: formatter_lib
         shell: bash
         run: |
-          cd FormatterInc./formatter_lib/
+          cd formatter_lib/
           cmake -Bbuild
           cd build
           make
@@ -33,7 +33,7 @@ jobs:
       - name: formatter_ex_lib
         shell: bash
         run: |
-          cd FormatterInc./formatter_ex_lib/
+          cd formatter_ex_lib/
           cmake -Bbuild
           cd build
           make
@@ -41,7 +41,7 @@ jobs:
       - name: hw_app
         shell: bash
         run: |
-          cd FormatterInc./hello_world_application/
+          cd hello_world_application/
           cmake -Bbuild
           cd build
           make
@@ -50,7 +50,7 @@ jobs:
       - name: solver_app
         shell: bash
         run: |
-          cd FormatterInc./solver_application/
+          cd solver_application/
           cmake -Bbuild
           cd build
           make
